@@ -1,0 +1,57 @@
+
+Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Circuit: ** sch_path: /home/antony/documents/sram130/6t_sram_130_testbench.sch
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+binary raw file "/home/antony/Documents/sram130/simulation/6t_sram_130_testbench.raw"
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: vin3: no DC value, transient time 0 value used
+Warning: vin2: no DC value, transient time 0 value used
+Warning: vin1: no DC value, transient time 0 value used
+Warning: vdd: no DC value, transient time 0 value used
+Warning: vin: no DC value, transient time 0 value used
+No. of Data Columns : 52  
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+wl                                           0
+qb                                    0.838029
+q                                     0.838029
+vdd!                                       1.8
+net1                                       1.8
+data                                         0
+bl                                     1.64001
+blb                                    1.76551
+pre                                        1.8
+write                                        0
+vin3#branch                         1.8458e-12
+vin2#branch                                  0
+vin1#branch                                  0
+vdd#branch                        -3.62161e-05
+vin#branch                                   0
+
+
+No. of Data Rows : 13855
+
+Total analysis time (seconds) = 1.385
+
+Total elapsed time (seconds) = 12.624 
+
+Total DRAM available = 11650.789 MB.
+DRAM currently available =  178.770 MB.
+Maximum ngspice program size =  681.566 MB.
+Current ngspice program size =  665.656 MB.
+
+Shared ngspice pages =   10.148 MB.
+Text (code) pages =    5.316 MB.
+Stack = 0 bytes.
+Library pages =  663.629 MB.
+

@@ -1,0 +1,41 @@
+
+No compatibility mode selected!
+
+
+Circuit: ** sch_path: /home/antony/documents/sram130/inverter130/inverter130_schematic.sch
+
+binary raw file "/home/antony/Documents/sram130/inverter130/simulation/inverter130_schematic.raw"
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: vin: no DC value, transient time 0 value used
+Warning: vss: no DC value, transient time 0 value used
+No. of Data Columns : 12  
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vcc                                        1.8
+in                                           0
+inv_out                                    1.8
+vin#branch                                   0
+vss#branch                        -2.03659e-12
+
+
+No. of Data Rows : 11208
+
+Total analysis time (seconds) = 0.852
+
+Total elapsed time (seconds) = 12.131 
+
+Total DRAM available = 11650.789 MB.
+DRAM currently available =  180.727 MB.
+Maximum ngspice program size =  681.535 MB.
+Current ngspice program size =  665.758 MB.
+
+Shared ngspice pages =   10.281 MB.
+Text (code) pages =    5.316 MB.
+Stack = 0 bytes.
+Library pages =  663.598 MB.
+

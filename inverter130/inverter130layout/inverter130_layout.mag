@@ -1,0 +1,109 @@
+magic
+tech sky130A
+timestamp 1681084687
+<< nwell >>
+rect -125 125 100 275
+<< nmos >>
+rect 5 -10 20 90
+<< pmos >>
+rect 5 150 20 250
+<< ndiff >>
+rect -45 75 5 90
+rect -45 5 -30 75
+rect -10 5 5 75
+rect -45 -10 5 5
+rect 20 75 70 90
+rect 20 5 35 75
+rect 55 5 70 75
+rect 20 -10 70 5
+<< pdiff >>
+rect -45 235 5 250
+rect -45 165 -30 235
+rect -10 165 5 235
+rect -45 150 5 165
+rect 20 235 70 250
+rect 20 165 35 235
+rect 55 165 70 235
+rect 20 150 70 165
+<< ndiffc >>
+rect -30 5 -10 75
+rect 35 5 55 75
+<< pdiffc >>
+rect -30 165 -10 235
+rect 35 165 55 235
+<< psubdiff >>
+rect -95 75 -45 90
+rect -95 5 -80 75
+rect -60 5 -45 75
+rect -95 -10 -45 5
+<< nsubdiff >>
+rect -95 235 -45 250
+rect -95 165 -80 235
+rect -60 165 -45 235
+rect -95 150 -45 165
+<< psubdiffcont >>
+rect -80 5 -60 75
+<< nsubdiffcont >>
+rect -80 165 -60 235
+<< poly >>
+rect 5 250 20 265
+rect 5 90 20 150
+rect 5 -25 20 -10
+rect -20 -35 20 -25
+rect -20 -55 -10 -35
+rect 10 -55 20 -35
+rect -20 -65 20 -55
+<< polycont >>
+rect -10 -55 10 -35
+<< locali >>
+rect -90 235 0 245
+rect -90 165 -80 235
+rect -60 165 -30 235
+rect -10 165 0 235
+rect -90 155 0 165
+rect 25 235 65 245
+rect 25 165 35 235
+rect 55 165 65 235
+rect 25 155 65 165
+rect 45 85 65 155
+rect -90 75 0 85
+rect -90 5 -80 75
+rect -60 5 -30 75
+rect -10 5 0 75
+rect -90 -5 0 5
+rect 25 75 65 85
+rect 25 5 35 75
+rect 55 5 65 75
+rect 25 -5 65 5
+rect -20 -35 20 -25
+rect -125 -55 -10 -35
+rect 10 -55 20 -35
+rect 45 -35 65 -5
+rect 45 -55 100 -35
+rect -20 -65 20 -55
+<< viali >>
+rect -80 165 -60 235
+rect -30 165 -10 235
+rect -80 5 -60 75
+rect -30 5 -10 75
+<< metal1 >>
+rect -125 235 100 245
+rect -125 165 -80 235
+rect -60 165 -30 235
+rect -10 165 100 235
+rect -125 155 100 165
+rect -125 75 100 85
+rect -125 5 -80 75
+rect -60 5 -30 75
+rect -10 5 100 75
+rect -125 -5 100 5
+<< labels >>
+rlabel locali -125 -45 -125 -45 7 A
+port 1 w
+rlabel locali 100 -45 100 -45 3 Y
+port 2 e
+rlabel metal1 -125 200 -125 200 7 vdd
+port 3 w
+rlabel metal1 -125 40 -125 40 7 gnd
+port 4 w
+<< end >>

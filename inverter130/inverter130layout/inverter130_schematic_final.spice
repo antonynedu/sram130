@@ -1,0 +1,7 @@
+** sch_path: /home/impact/Documents/inverter130/inverter130_schematic_final.sch
+.subckt inverter130_schematic_final A Y vdd gnd
+*.PININFO A:I Y:O vdd:B gnd:B
+XM1 Y A vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM2 Y A gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+.ends
+.end

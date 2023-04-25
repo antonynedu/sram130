@@ -1,24 +1,42 @@
-.lib "/home/antony/tools/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+** sch_path: /home/antony/Documents/sram130/6t_sram_130.sch
+**.subckt 6t_sram_130
+Vin BL GND pulse(0 1.8 1ns 1ns 1ns 5ns 10ns)
+.save i(vin)
+Vwl WL GND pwl 0 1.8
+.save i(vwl)
+XM1 Qb Q net1 net1 sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 Qb Q GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 Q Qb net1 net1 sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 Q Qb GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM5 BLb BL net1 net1 sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM6 BLb BL GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM7 Q WL BL GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM8 Qb WL BLb GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+vdd net1 GND pwl 0 1.8
+.save i(vdd)
+**** begin user architecture code
 
+.lib /home/antony/tools/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.tran 0.1n 1u
+.save all
 
-XM2 Qb Q gnd! gnd! sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 m=1
-XM4 Q Qb gnd! gnd! sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 m=1
-XM5 Q WL BL gnd! sky130_fd_pr__nfet_01v8 L=0.15 W=0.45 m=1
-XM6 Qb WL BLb gnd! sky130_fd_pr__nfet_01v8 L=0.15 W=0.45 m=1
-XM1 Qb Q vdd! vdd! sky130_fd_pr__pfet_01v8 L=0.15 W=0.3 m=1
-XM3 Q Qb vdd! vdd! sky130_fd_pr__pfet_01v8 L=0.15 W=0.3 m=1
-
-
-*Test Pulses
-v1 BL 0 pulse(0 1.8 0ns 60ps 60ps 5ns 10ns)
-v2 WL 0 dc 1.8v
-
-
-**************
-.tran 1e-09 20e-09 0e-00
-.control
-run
-plot WL BL-2 BLb-4 Q-6 Qb-8
-
-
+**** end user architecture code
+**.ends
+.GLOBAL GND
 .end

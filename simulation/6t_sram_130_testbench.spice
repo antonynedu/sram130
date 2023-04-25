@@ -1,0 +1,35 @@
+** sch_path: /home/antony/Documents/sram130/6t_sram_130_testbench.sch
+.subckt 6t_sram_130_testbench
+
+Vin WL GND pulse(0 1.8 0ns 0ns 0ns 10ns 20ns)
+.save i(vin)
+XM1 Qb Q vdd! vdd! sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM2 Qb Q GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM3 Q Qb vdd! vdd! sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM4 Q Qb GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM5 net1 DATA vdd! vdd! sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM6 net1 DATA GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM7 Q WL BL GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM8 Qb WL BLb GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+vdd vdd! GND pwl 0 1.8
+.save i(vdd)
+XM9 BLb PRE vdd! vdd! sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM10 BL PRE vdd! vdd! sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM11 BLb WRITE net1 net1 sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM12 BL WRITE DATA DATA sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+Vin1 PRE GND pulse(1.8 1.8 0ns 0ns 0ns 4ns 10ns)
+.save i(vin1)
+Vin2 WRITE GND pulse(0 1.8 0ns 0ns 0ns 10ns 20ns)
+.save i(vin2)
+Vin3 DATA GND pulse(0 1.8 0ns 0ns 0ns 2ns 4ns)
+.save i(vin3)
+**** begin user architecture code
+
+.lib /home/antony/tools/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.tran 0.1n 1u
+.save all
+
+**** end user architecture code
+.ends
+.GLOBAL GND
+.end

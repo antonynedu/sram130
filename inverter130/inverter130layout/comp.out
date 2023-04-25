@@ -1,0 +1,5 @@
+
+Cells have no pins;  pin matching not needed.
+Device classes inverter130_layout.spice and inverter130_schematic_final.spice are equivalent.
+
+Final result: Verify:  cell inverter130_schematic_final.spice has no elements and/or nodes.  Not checked.
